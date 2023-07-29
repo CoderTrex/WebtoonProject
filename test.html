@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+            background: white;
+            height: 10px;
+            font-family: 'nanumsquare';
+            margin: 0;
+            flex-wrap: wrap;
+            text-align: center;
+            flex-wrap: wrap; /* Allow images to wrap to the next line */
+        }
+        div {
+            margin-top: 0px;
+            color: white;
+            text-align: center;
+        }
+        img {
+            text-align: center;
+            margin: 5px; /* Adjust the margin to control the gap between images */
+            max-width: 100%; /* Make sure the images don't exceed their container */
+            height: auto; /* Maintain the aspect ratio of images */
+            padding-bottom: 100%;
+        }
+    </style>
+
+    <audio id="audio" autoplay>
+        <source src="./Untitled1.wav">
+    </audio>
+
+    <script>
+        for (let i = 1; i <= 40; i++) {
+            const img = document.createElement('img');
+            img.src = `./img/20230622175007_1e33af50baf68827016300f1414453dc_IMAG01_${i}.jpg`;
+            document.body.appendChild(img);
+        }
+    </script>
+    <script>
+        let observer = new IntersectionObserver((e) => {
+            // IntersectionObserver logic goes here
+        });
+    </script>
+</body>
+</html>
