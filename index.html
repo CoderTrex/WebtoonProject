@@ -7,17 +7,15 @@
     initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
     <style>
         body{
-            background: black;
+            background: white;
             height: 6000px;
             font-family: 'nanumsquare';
             margin: 0;
-            display: flex;
             flex-wrap: wrap;
-            
+            text-align: center;
         }
         div{
             margin-top: 0px;
@@ -32,15 +30,18 @@
             object-fit: cover;
         }
     </style>
-
+    
+    <audio id="audio" autoplay>
+    <source src="./Untitled1.wav">
+    </audio>
+    
     <script>
         for (let i = 1; i <= 40; i++) {
-          const img = document.createElement('img');
-          img.src = `./img/20230622175007_1e33af50baf68827016300f1414453dc_IMAG01_${i}.jpg`;
-          document.body.appendChild(img);
-        }
+            const img = document.createElement('img');
+        img.src = `./img/20230622175007_1e33af50baf68827016300f1414453dc_IMAG01_${i}.jpg`;
+        document.body.appendChild(img);
+    }
     </script>
-
     <script>
         let observer = new IntersectionObserver ((e))
     </script>
