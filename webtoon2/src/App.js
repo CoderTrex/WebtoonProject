@@ -15,6 +15,18 @@ function App() {
     setlastScrollY(scrollY);
   });
 
+  useEffect(()=> {
+    var AudioContext;
+    var audioContext;
+      
+    navigator.mediaDevices.getUserMedia({ audio: true }).then(() => {
+        AudioContext = window.AudioContext || window.webkitAudioContext;
+        audioContext = new AudioContext();
+    }).catch(e => {
+        console.error(`Audio permissions denied: ${e}`);
+    })
+  })
+
   useEffect(() => {
     // IntersectionObserver 등록
     const io = new IntersectionObserver(entries => {
