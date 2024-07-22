@@ -114,7 +114,7 @@ function App() {
               key={i}
             >
               <img
-                src={require(`./imageFinal/${i}.jpg`)}
+                src={require(`./image/${i}.jpg`)}
                 className="webImg"
                 style={{
                   backgroundColor: "red",
